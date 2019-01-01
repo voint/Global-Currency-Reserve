@@ -1646,8 +1646,8 @@ Value validatepubkey(const Array& params, bool fHelp)
 {
     if (fHelp || !params.size() || params.size() > 2)
         throw runtime_error(
-            "validatepubkey <diplexcoinpubkey>\n"
-            "Return information about <diplexcoinpubkey>.");
+            "validatepubkey <Global-Currency-Reservepubkey>\n"
+            "Return information about <Global-Currency-Reservepubkey>.");
 
     std::vector<unsigned char> vchPubKey = ParseHex(params[0].get_str());
     CPubKey pubKey(vchPubKey);

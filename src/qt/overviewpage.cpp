@@ -123,8 +123,8 @@ OverviewPage::OverviewPage(QWidget *parent) :
 
 	
     // init "out of sync" warning labels
-    ui->labelWalletStatus->setText("(" + tr("Out of sync with the diplexcoin network") + ")");
-    ui->labelTransactionsStatus->setText("(" + tr("Out of sync with the diplexcoin network") + ")");
+    ui->labelWalletStatus->setText("(" + tr("Out of sync with the Global-Currency-Reserve network") + ")");
+    ui->labelTransactionsStatus->setText("(" + tr("Out of sync with the Global-Currency-Reserve network") + ")");
 
     // start with displaying the "out of sync" warnings
     showOutOfSyncWarning(true);
@@ -288,7 +288,7 @@ void OverviewPage::setModel(WalletModel *model)
         connect(model->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
     }
 
-    // update the display unit, to not use the default ("diplexcoin")
+    // update the display unit, to not use the default ("Global-Currency-Reserve")
     updateDisplayUnit();
 }
 

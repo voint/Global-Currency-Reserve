@@ -960,7 +960,7 @@ static std::string FormatException(std::exception* pex, const char* pszThread)
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "diplexcoin";
+    const char* pszModule = "Global-Currency-Reserve";
 #endif
     if (pex)
         return strprintf(
@@ -1009,13 +1009,13 @@ void PrintExceptionContinue(std::exception* pex, const char* pszThread)
 boost::filesystem::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\diplexcoin
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\diplexcoin
-    // Mac: ~/Library/Application Support/diplexcoin
-    // Unix: ~/.diplexcoin
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Global-Currency-Reserve
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Global-Currency-Reserve
+    // Mac: ~/Library/Application Support/Global-Currency-Reserve
+    // Unix: ~/.Global-Currency-Reserve
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "diplexcoin";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Global-Currency-Reserve";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -1027,10 +1027,10 @@ boost::filesystem::path GetDefaultDataDir()
     // Mac
     pathRet /= "Library/Application Support";
     fs::create_directory(pathRet);
-    return pathRet / "diplexcoin";
+    return pathRet / "Global-Currency-Reserve";
 #else
     // Unix
-    return pathRet / ".diplexcoin";
+    return pathRet / ".Global-Currency-Reserve";
 #endif
 #endif
 }
@@ -1072,7 +1072,7 @@ const boost::filesystem::path &GetDataDir(bool fNetSpecific)
 
 boost::filesystem::path GetConfigFile()
 {
-    boost::filesystem::path pathConfigFile(GetArg("-conf", "diplexcoin.conf"));
+    boost::filesystem::path pathConfigFile(GetArg("-conf", "Global-Currency-Reserve.conf"));
     if (!pathConfigFile.is_complete()) pathConfigFile = GetDataDir(false) / pathConfigFile;
     return pathConfigFile;
 }
@@ -1103,7 +1103,7 @@ void ReadConfigFile(map<string, string>& mapSettingsRet,
 
 boost::filesystem::path GetPidFile()
 {
-    boost::filesystem::path pathPidFile(GetArg("-pid", "diplexcoind.pid"));
+    boost::filesystem::path pathPidFile(GetArg("-pid", "Global-Currency-Reserved.pid"));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }
@@ -1233,10 +1233,10 @@ void AddTimeData(const CNetAddr& ip, int64_t nTime)
                 if (!fMatch)
                 {
                     fDone = true;
-                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong diplexcoin will not work properly.");
+                    string strMessage = _("Warning: Please check that your computer's date and time are correct! If your clock is wrong Global-Currency-Reserve will not work properly.");
                     strMiscWarning = strMessage;
                     printf("*** %s\n", strMessage.c_str());
-                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("diplexcoin"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
+                    uiInterface.ThreadSafeMessageBox(strMessage+" ", string("Global-Currency-Reserve"), CClientUIInterface::OK | CClientUIInterface::ICON_EXCLAMATION);
                 }
             }
         }

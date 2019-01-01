@@ -1,9 +1,9 @@
-diplexcoin Current Version
+Global-Currency-Reserve Current Version
 ===========================
 Version: 1.0.0.1
 
 
-diplexcoin Development Tree
+Global-Currency-Reserve Development Tree
 ===========================
 Developers work in their own trees, then submit pull requests when they think their feature or bug fix is ready.
 
@@ -18,4 +18,4 @@ Feature branches are created when there are major new features being worked on b
 
 License
 ===========================
-diplexcoin Core is released under the terms of the MIT license. See http://opensource.org/licenses/MIT for more information.
+Global-Currency-Reserve Core is released under the terms of the MIT license. See http://opensource.org/licenses/MIT for more information.

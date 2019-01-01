@@ -1,9 +1,9 @@
-Building diplexcoin
+Building Global-Currency-Reserve Current
 
-See doc/readme-qt.rst for instructions on building diplexcoin QT,
+See doc/readme-qt.rst for instructions on building Global-Currency-Reserve Current QT,
 the intended-for-end-users, nice-graphical-interface, reference
-implementation of diplexcoin.
+implementation of Global-Currency-Reserve Current.
 
-See doc/build-*.txt for instructions on building diplexcoind,
+See doc/build-*.txt for instructions on building Global-Currency-Reserved,
 the intended-for-services, no-graphical-interface, reference
-implementation of diplexcoin.
+implementation of Global-Currency-Reserve Current.

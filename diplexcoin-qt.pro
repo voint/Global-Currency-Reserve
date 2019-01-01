@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = diplexcoin-qt
+TARGET = Global-Currency-Reserve-qt
 VERSION = 1.0.0.1
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE

@@ -578,7 +578,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString & text)
         else if (!CBitcoinAddress(text.toStdString()).IsValid())
         {
             ui->labelCoinControlChangeLabel->setStyleSheet("QLabel{color:red;}");
-            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid diplexcoin address"));
+            ui->labelCoinControlChangeLabel->setText(tr("WARNING: Invalid Global-Currency-Reserve address"));
         }
         else
         {

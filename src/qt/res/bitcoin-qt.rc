@@ -18,14 +18,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "diplexcoin"
-            VALUE "FileDescription",    "diplexcoin-Qt (OSS GUI client for diplexcoin)"
+            VALUE "CompanyName",        "Global-Currency-Reserve"
+            VALUE "FileDescription",    "Global-Currency-Reserve-Qt (OSS GUI client for Global-Currency-Reserve)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "diplexcoin-qt"
-            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The diplexcoin developers"
+            VALUE "InternalName",       "Global-Currency-Reserve-qt"
+            VALUE "LegalCopyright",     "2009-2014 The Bitcoin developers, 2012-2014 The NovaCoin & PPCoin developers, 2014 The Global-Currency-Reserve developers"
             VALUE "LegalTrademarks1",   "Distributed under the MIT/X11 software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "diplexcoin-qt.exe"
-            VALUE "ProductName",        "diplexcoin-Qt"
+            VALUE "OriginalFilename",   "Global-Currency-Reserve-qt.exe"
+            VALUE "ProductName",        "Global-Currency-Reserve-Qt"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

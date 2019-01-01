@@ -115,10 +115,10 @@ Value getworkex(const Array& params, bool fHelp)
         );
 
     if (vNodes.empty())
-        throw JSONRPCError(-9, "diplexcoin is not connected!");
+        throw JSONRPCError(-9, "Global-Currency-Reserve is not connected!");
 
     if (IsInitialBlockDownload())
-        throw JSONRPCError(-10, "diplexcoin is downloading blocks...");
+        throw JSONRPCError(-10, "Global-Currency-Reserve is downloading blocks...");
 
     if (pindexBest->nHeight >= LAST_POW_BLOCK)
         throw JSONRPCError(RPC_MISC_ERROR, "No more PoW blocks");

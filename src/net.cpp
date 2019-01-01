@@ -1045,7 +1045,7 @@ void ThreadMapPort2(void* parg)
             }
         }
 
-        string strDesc = "diplexcoin " + FormatFullVersion();
+        string strDesc = "Global-Currency-Reserve " + FormatFullVersion();
 #ifndef UPNPDISCOVER_SUCCESS
         /* miniupnpc 1.5 */
         r = UPNP_AddPortMapping(urls.controlURL, data.first.servicetype,
@@ -1432,7 +1432,7 @@ void ThreadOpenConnections2(void* parg)
 void ThreadOpenAddedConnections(void* parg)
 {
     // Make this thread recognisable as the connection opening thread
-    RenameThread("diplexcoin-opencon");
+    RenameThread("Global-Currency-Reserve-opencon");
 
     try
     {

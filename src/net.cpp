@@ -1563,7 +1563,7 @@ bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOu
 void ThreadMessageHandler(void* parg)
 {
     // Make this thread recognisable as the message handling thread
-    RenameThread("diplexcoin-msghand");
+    RenameThread("Global-Currency-Reserve-msghand");
 
     try
     {

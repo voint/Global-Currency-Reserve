@@ -272,14 +272,14 @@ void BitcoinGUI::createActions()
     quitAction->setToolTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About diplexcoin"), this);
-    aboutAction->setToolTip(tr("Show information about diplexcoin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About dGlobal-Currency-Reserve"), this);
+    aboutAction->setToolTip(tr("Show information about Global-Currency-Reserveiplexcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setToolTip(tr("Show information about Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
     optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setToolTip(tr("Modify configuration options for diplexcoin"));
+    optionsAction->setToolTip(tr("Modify configuration options for Global-Currency-Reserve"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     toggleHideAction = new QAction(QIcon(":/icons/bitcoin"), tr("&Show / Hide"), this);
     encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -401,7 +401,7 @@ void BitcoinGUI::setClientModel(ClientModel *clientModel)
 #endif
             if(trayIcon)
             {
-                trayIcon->setToolTip(tr("diplexcoin client") + QString(" ") + tr("[testnet]"));
+                trayIcon->setToolTip(tr("Global-Currency-Reserve client") + QString(" ") + tr("[testnet]"));
                 trayIcon->setIcon(QIcon(":/icons/toolbar_testnet"));
                 toggleHideAction->setIcon(QIcon(":/icons/toolbar_testnet"));
             }
@@ -464,7 +464,7 @@ void BitcoinGUI::createTrayIcon()
     trayIcon = new QSystemTrayIcon(this);
     trayIconMenu = new QMenu(this);
     trayIcon->setContextMenu(trayIconMenu);
-    trayIcon->setToolTip(tr("diplexcoin client"));
+    trayIcon->setToolTip(tr("dGlobal-Currency-Reserve client"));
     trayIcon->setIcon(QIcon(":/icons/toolbar"));
     connect(trayIcon, SIGNAL(activated(QSystemTrayIcon::ActivationReason)),
             this, SLOT(trayIconActivated(QSystemTrayIcon::ActivationReason)));
@@ -546,7 +546,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/icons/connect_4"; break;
     }
     labelConnectionsIcon->setPixmap(QIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to diplexcoin network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to Global-Currency-Reserve network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
@@ -572,7 +572,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
         {
             progressBarLabel->setText(tr("Synchronizing with network..."));
             progressBarLabel->setVisible(false);
-            progressBar->setFormat(tr("Synchronizing with the diplexcoin network:   %n block(s) remaining", "", nRemainingBlocks));
+            progressBar->setFormat(tr("Synchronizing with the Global-Currency-Reserve network:   %n block(s) remaining", "", nRemainingBlocks));
             progressBar->setMaximum(nTotalBlocks);
             progressBar->setValue(count);
             progressBar->setVisible(true);
@@ -898,7 +898,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             gotoSendCoinsPage();
         else
-            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid diplexcoin address or malformed URI parameters."));
+            notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Global-Currency-Reserve address or malformed URI parameters."));
     }
 
     event->acceptProposedAction();
@@ -913,7 +913,7 @@ void BitcoinGUI::handleURI(QString strURI)
         gotoSendCoinsPage();
     }
     else
-        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid diplexcoin address or malformed URI parameters."));
+        notificator->notify(Notificator::Warning, tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Global-Currency-Reserve address or malformed URI parameters."));
 }
 
 void BitcoinGUI::setEncryptionStatus(int status)
@@ -1038,10 +1038,10 @@ void BitcoinGUI::updateStyleSlot()
 
 void BitcoinGUI::updateStyle()
 {
-    if (!fUsediplexcoinTheme)
+    if (!fUseGlobal-Currency-ReserveTheme)
         return;
 
-    QString qssPath = QString::fromStdString( GetDataDir().string() ) + "/diplexcoin.qss";
+    QString qssPath = QString::fromStdString( GetDataDir().string() ) + "/Global-Currency-Reserve.qss";
 
     QFile f( qssPath );
 

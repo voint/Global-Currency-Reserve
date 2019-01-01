@@ -7,12 +7,12 @@ software written by Eric Young (eay@cryptsoft.com) and UPnP software written by
 Thomas Bernard.
 
 
-Mac OS X diplexcoind build instructions
+Mac OS X Global-Currency-Reserved build instructions
 Laszlo Hanyecz <solar@heliacal.net>
 Douglas Huff <dhuff@jrbobdobbs.org>
 
 
-See readme-qt.rst for instructions on building diplexcoin QT, the
+See readme-qt.rst for instructions on building Global-Currency-Reserve QT, the
 graphical user interface.
 
 Tested on 10.5 and 10.6 intel.  PPC is not supported because it's big-endian.
@@ -27,7 +27,7 @@ but you can get the current version from http://developer.apple.com
 
 1.  Clone the github tree to get the source code:
 
-git clone git@github.com:rat4/diplexcoin.git diplexcoin
+git clone git@github.com:rat4/Global-Currency-Reserve.git Global-Currency-Reserve
 
 2.  Download and install MacPorts from http://www.macports.org/
 
@@ -41,14 +41,14 @@ sudo port install boost db48 openssl miniupnpc
 Optionally install qrencode (and set USE_QRCODE=1):
 sudo port install qrencode
 
-4.  Now you should be able to build diplexcoind:
+4.  Now you should be able to build Global-Currency-Reserved:
 
-cd diplexcoin/src
+cd Global-Currency-Reserve/src
 make -f makefile.osx
 
 Run:
-  ./diplexcoind --help  # for a list of command-line options.
+  ./Global-Currency-Reserved --help  # for a list of command-line options.
 Run
-  ./diplexcoind -daemon # to start the diplexcoin daemon.
+  ./Global-Currency-Reserved -daemon # to start the Global-Currency-Reserve daemon.
 Run
-  ./diplexcoind help # When the daemon is running, to get a list of RPC commands
+  ./Global-Currency-Reserved help # When the daemon is running, to get a list of RPC commands
